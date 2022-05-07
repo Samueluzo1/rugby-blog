@@ -1,0 +1,244 @@
+* {
+  /* Best way to ajust my own margins is to use the universal selector followed by the following properties */
+  margin: 0;
+  padding: 0; /* If I want the margin to be applied to every single element (the spaces) */
+}
+
+/* PAGE SECTION */
+body {
+  color: #444; /* For all of the colors that do not have a color declaration */
+  font-family: sans-serif;
+  position: relative;
+  background-color: grey;
+}
+
+.container {
+  width: 700px; /* if I move the page you will see everything will now stay on the left side.*/
+  margin-left: auto; /* What this means is that the margin on the left needs to be the same as the margin on the right */
+  margin-right: auto; /* They should both be calculated automatically by the browser */
+  /* margin: 0 auto; Shorthand for the margin */
+}
+
+.main-header {
+  background-color: #f7f7f7;
+  /* padding: 20px;
+  padding-left: 40px;
+  padding-right: 40px; */
+  padding: 20px 40px; /* Shorter way to write above code */
+  margin-bottom: 60px;
+  /* height: 80px; */
+}
+
+nav {
+  font-size: 10px;
+}
+
+article {
+  margin-bottom: 60px;
+}
+
+.post-header {
+  margin-bottom: 40px;
+}
+
+aside {
+  background-color: #f7f7f7;
+  border: 5px solid #404647;
+  border-top: 5px solid #404647;
+  border-bottom: 5px solid #404647;
+  /* padding-top: 50px;
+  padding-bottom: 50px; */
+  padding: 50px 0;
+  width: 500px; /* condenses the box */
+}
+
+/* SMALLER ELEMENTS */
+/* h1,   /* this is called a list selector */
+/* h2,
+h3,
+h4,
+p, 
+li {
+} */
+
+.rugby {
+  color: black;
+}
+
+h1,
+h2,
+h3 {
+  color: #f9fdfd;
+}
+h1 {
+  font-size: 26px;
+  text-transform: uppercase; /* turn all text upper case */
+  font-style: italic;
+}
+
+h2 {
+  font-size: 40px;
+  margin-bottom: 30px;
+}
+
+h3 {
+  font-size: 30px;
+  margin-bottom: 20px;
+  margin-top: 40px;
+}
+
+h4 {
+  font-size: 20px;
+  text-transform: uppercase; /* MAKES ALL TEXT CAPITAL LETTERS */
+  text-align: center;
+}
+
+p {
+  font-size: 22px;
+  line-height: 1.5; /*Here we use a value without a unit. 1.5 simply means that the line height will be 1.5x the font size */
+  margin-bottom: 15px;
+}
+
+ul,   /* brought bullet points back after universal selector */
+ol {
+  margin-left: 50px;
+  margin-bottom: 20px;
+}
+
+li {
+  font-size: 20px;
+  margin-bottom: 10px; /* Spaced out the li (bullet points) */
+}
+
+li:last-child {
+  margin-bottom: 0; /* reduces space from last child (emoji) */
+}
+
+/* Decendant selector - this selects all the p elements that are inside of footer elements */
+/* footer p {
+  font-size: 16px;
+} */
+
+/* a nested decendant selector
+so we only want the paragraghs that are inside header and article to be italic 
+article header p {
+  font-style: italic;
+}*/
+
+#author {
+  font-style: italic;
+  font-size: 18px;
+}
+
+#copyright {
+  font-size: 16px;
+}
+
+.related-author {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.related {
+  list-style: none;
+}
+
+/* .first-li {
+  font-weight: bold;
+} */
+
+/*psuedo class example which makes the first list items bold. Instead of adding the class attribute like above */
+li:first-child {
+  font-weight: bold;
+}
+
+li:last-child {
+  font-style: italic;
+}
+
+/* to target a specific child */
+/* li:nth-child(even) {
+  color: red;
+} */
+
+/* wont work because p isn't the first child of the article header is */
+/* article p:first-child {
+  color: red;
+} */
+
+/* Styling links */
+a:link {
+  color: #022f36;
+  text-decoration: none;
+}
+
+/* color after a link has been visited */
+a:visited {
+  color: #1098ad;
+}
+
+a:hover {
+  color: rgb(230, 30, 63);
+  font-weight: bold;
+  /* text-decoration: underline rgb(3, 3, 3); */
+}
+
+a:active {
+  background-color: black;
+  font-style: italic;
+}
+
+.post-image {
+  width: 100%; /* % will add to the width of the page - will move to be adjustable to page size*/
+  height: auto; /* fix stretchness after width adjustment */
+}
+
+nav a:link {
+  /* background-color: orangered;
+  margin: 20px;
+  padding: 20px;
+  display: block; This will then render the in line element as a block level element */
+  margin-right: 30px;
+  margin-top: 10px;
+  display: inline-block;
+}
+
+nav a:link:last-child {
+  /* inspecting the last child in dev tools will no longer have the space on the right side like the rest of the nav elements */
+  margin-right: 0;
+}
+
+button {
+  font-size: 22px;
+  padding: 20px;
+  cursor: pointer;
+
+  position: absolute;
+  bottom: 50px;
+  right: 50px;
+}
+
+/* psuedo class */
+h1::first-letter {
+  font-style: normal;
+  margin-right: 5px;
+}
+
+/* h2 {
+  /* background-color: orange; */
+/* position: relative; */
+/* } */
+
+/* the after pseudo element */
+/* h2::after {
+  content: "TOP";
+  background-color: #ffe70e;
+  color: #000;
+  font-size: 16px;
+  font-weight: bold;
+  display: inline-block;
+  padding: 5px 10px;
+  position: absolute;
+  top: -10px; /* moves the yellow background color outside of the orange box towards the top */
+/* right: -25px; 
+} */
